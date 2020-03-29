@@ -10,7 +10,8 @@
 
 На тестирование затрачено: 20 минут
 
-В результате тестирования багов не выявлено.
+В результате тестирования выявлен следующий баг:
+* [Банковская карта American Express с 15-значным наименованием отдает FAIL](https://github.com/voevodina/card/issues/1)
 
 ## Описание процесса тестирования
 
@@ -21,7 +22,7 @@
 В качестве тестовых данных использовались данные из [Руководства использования IntelliJ IDEA](https://github.com/netology-code/javaqa-homeworks/tree/master/intro):
 
 * Установочный файл **jetbrains-toolbox-1.16.6319.exe** с сайта [www.jetbrains.com](https://www.jetbrains.com/toolbox/app/)
-* Номера банковских карт Visa, Mastercard с ресурса [www.getcreditcardnumbers.com](https://www.getcreditcardnumbers.com/) 
+* Номера банковских карт Visa, Mastercard, American Express с ресурса [www.getcreditcardnumbers.com](https://www.getcreditcardnumbers.com/) 
 * [Код](https://github.com/netology-code/javaqa-homeworks/tree/master/intro)
 
 ```
@@ -122,13 +123,15 @@ public class Main {
 
 **Ожидаемый результат**:
 
+Номера банковских карт при проверке отдают ОК
+
 ![run](https://github.com/netology-code/javaqa-homeworks/blob/master/intro/pic/toolbox-step21.png)
 
-**Фактический результат** соответствует ожидаемому:
+**Фактический результат**:
 
-![run](https://github.com/voevodina/images/blob/master/Card.png)
+Банковские карты, номера которых менее 16 цифр, отдают FAIL
 
-![run](https://github.com/voevodina/images/blob/master/Card_2.png)
+![img](https://github.com/voevodina/images/blob/master/Card_3.png?raw=true)
 
 Тестирование производилось в следующем окружении:
 
